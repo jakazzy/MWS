@@ -14,13 +14,13 @@ function succeed(item) {
 
 function fail(item) {
     if (item.enhancement < 15) {
-        durability = durability - 5;
+        item.durability = item.durability - 5;
     }
     if (item.enhancement > 16) {
-        durability--;
+        item.durability--;
     }
     if (item.enhancement >= 15) {
-        durability = durability - 10;
+        item.durability = item.durability - 10;
     }
     return {...item };
 }
