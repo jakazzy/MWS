@@ -1,3 +1,10 @@
+module.exports = {
+    succeed,
+    fail,
+    repair,
+    get,
+};
+
 function succeed(item) {
     if (item.enhancement < 20) {
         item.enhancement++;
@@ -25,10 +32,3 @@ function repair(item) {
 function get(item) {
     return {...item };
 }
-
-export default {
-    succeed,
-    fail,
-    repair,
-    get,
-};
