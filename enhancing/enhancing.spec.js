@@ -85,3 +85,9 @@ describe('When enhancement fails', () => {
         expect(number).toEqual(value)
     });
 })
+
+describe('name modified when enhancement is greater than 0', () => {
+    let value = `[+${enhancedItem.enhancement}] ${enhancedItem.name}`;
+    name = get(enhancedItem).name;
+    expect(name).toEqual(value)
+})
