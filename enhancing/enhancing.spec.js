@@ -32,9 +32,22 @@ describe('Checks item properties', () => {
     it('should check if item has a property durability', () => {
         expect(item).toHaveProperty('durability')
     });
-
+    it('should be greater than or equal to 0(item\'s enhancements)', () => {
+        expect(item.enhancement).toBeGreaterThanOrEqual(0);
+    })
+    it('should be less than or equal to 20(item\'s enhancements)', () => {
+        expect(item.enhancement).toBeLessThanOrEqual(20);
+    })
+    it('should be greater than or equal to 0(item\'s durability)', () => {
+        expect(item.durability).toBeGreaterThanOrEqual(0);
+    })
+    it('should be less than or equal to 100(item\'s durability)', () => {
+        expect(item.durability).toBeLessThanOrEqual(100);
+    })
 })
 
-it('checks if value of item.enhancement less than zero increases by one', () => {
-    expect(success.enhancement).toBe(15)
+describe('when enhancement suceeds', () => {
+    it('checks if value of item.enhancement increases by one', () => {
+        expect(success.enhancement).toBe(15)
+    })
 })
