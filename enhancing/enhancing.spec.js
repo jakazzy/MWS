@@ -12,6 +12,12 @@ const item = {
     enhancement: 14,
     durability: 60
 }
+
+const enhancedItem = {
+    name: 'enhancedItem',
+    enhancement: 20,
+    durability: 70
+}
 const success = succeed(item);
 const needRepair = repair(item);
 const failedItem = fail(item);
@@ -48,6 +54,8 @@ describe('Checks item properties', () => {
 
 describe('when enhancement suceeds', () => {
     it('checks if value of item.enhancement increases by one', () => {
-        expect(success.enhancement).toBe(15)
+        let { enhancement } = item;
+        enhancement++;
+        expect(succeed(item).enhancement).toEqual(enhancement)
     })
 })
