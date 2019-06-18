@@ -17,7 +17,7 @@ function fail(item) {
         item.durability = item.durability - 5;
     }
     if (item.enhancement > 16) {
-        item.durability--;
+        item.enhancement--;
     }
     if (item.enhancement >= 15) {
         item.durability = item.durability - 10;
@@ -32,3 +32,13 @@ function repair(item) {
 function get(item) {
     return {...item };
 }
+
+
+const item = {
+    name: 'enhancedItem',
+    enhancement: 20,
+    durability: 70
+}
+
+console.log(succeed(item), 'suceed');
+console.log(fail(item), 'fail')

@@ -9,7 +9,7 @@ const {
 
 const item = {
     name: 'item',
-    enhancement: 14,
+    enhancement: 13,
     durability: 60
 }
 
@@ -18,13 +18,10 @@ const enhancedItem = {
     enhancement: 20,
     durability: 70
 }
-const success = succeed(item);
-const needRepair = repair(item);
-const failedItem = fail(item);
 
 describe('Repair item', () => {
     it('should restore durability to 100', () => {
-        expect(needRepair.durability).toBe(100)
+        expect(repair(item).durability).toBe(100)
     })
 });
 
@@ -57,5 +54,34 @@ describe('when enhancement suceeds', () => {
         let { enhancement } = item;
         enhancement++;
         expect(succeed(item).enhancement).toEqual(enhancement)
+    });
+    it('checks if value of item.enhancement 20 and the enhancement does not change', () => {
+        let { enhancement } = enhancedItem;
+        expect(succeed(enhancedItem).enhancement).toEqual(20)
     })
+    it('checks if value of item.enhancement 20 and the durability does not change', () => {
+        let { durability } = enhancedItem;
+        expect(succeed(enhancedItem).durability).toEqual(durability)
+    })
+})
+
+describe('When enhancement fails', () => {
+    it('should check if when enhancement is less than 15 durability is decreased by 5', () => {
+        let value = item.durability;
+        value = value - 5;
+        const number = fail(item).durability;
+        expect(number).toEqual(value)
+    });
+    it('should check if when enhancement is more than 15 durability is decreased by 10', () => {
+        let value = enhancedItem.durability;
+        value = value - 10;
+        const number = fail(enhancedItem).durability;
+        expect(number).toEqual(value)
+    });
+    it('should check if when enhancement is more than 16 enhancement is decreased by 1', () => {
+        let value = enhancedItem.enhancement;
+        value = value - 1;
+        const number = fail(enhancedItem).enhancement;
+        expect(number).toEqual(value)
+    });
 })
