@@ -2,29 +2,36 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function Fetch({ url }) {
-    const [data, setdata] = useState(null);
+    const [data, setData] = useState(null);
 
     useEffect(
         () => {
             let mounted = true;
 
-            const loadData = async() => {
+            const loadData = async () => {
                 const response = await axios.get(url);
+                // console.log(response.data, 'response');
+               
                 if (mounted) {
-                    setdata(response.data);
+                    setData(response.data);
+                    // console.log(response.data, 'both')
                 }
-            }
+            };
+
             loadData();
 
             return () => {
                 mounted = false;
             };
-        }, [url]
+        }, 
+        [url]
     );
 
 
 if (!data) {
+    console.log(data, 'dont load')
     return <span data-testid ='loading'> Loading data... </span>
 }
-return <span  data-testid ='resolved'> { data.greeting } </span>
+console.log(data, 'load')
+return (<span data-testid ='resolved'> { data.greeting } </span>)
 }
