@@ -26,5 +26,5 @@ export default function Fetch({ url }) {
 if (!data) {
     return <span data-testid ='loading'> Loading data... </span>
 }
-return <span > { data.greeting } </span>
+return <span  data-testid ='resolved'> { data.greeting } </span>
 }
