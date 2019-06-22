@@ -4,4 +4,9 @@ import 'jest-dom/extend-expect'
 import axiosMock from 'axios'
 import Fetch from './Fetch'
 
-it('fetches and displays data', async() => {})
+afterEach(cleanup)
+it('fetches and displays data', async() => {
+    const url = '/greeting';
+    const { getByTestId} = render( <Fetch url = { url }/>);
+    expect(getByTestId('loading')).toHaveTextContent('Loading data...');
+})
