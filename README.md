@@ -1,5 +1,5 @@
-Name: Jida Asare
-email address: jakazzy@gmail.com 
-username: jida asare
-                Backend
-                Nodejs 
+Name: Jida Asare <br>
+email address: jakazzy@gmail.com <br>
+username: jida asare<br>
+                Backend<br>
+                Nodejs <br>
