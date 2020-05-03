@@ -47,7 +47,7 @@
     display: inline-block;
     padding: 10px;
     font-weight: 500;
-    color: #cdddeb;
+    color: #071b2b;
   }
   .blog-nav-item:hover,
   .blog-nav-item:focus {
@@ -57,7 +57,8 @@
   
   /* Active state gets a caret at the bottom */
   .blog-nav .active {
-    color: #fff;
+    color: #1d1301;
+    font-weight: 600;
   }
   .blog-nav .active:after {
     position: absolute;
@@ -90,7 +91,7 @@
   }
   .blog-description {
     font-size: 20px;
-    color: #999;
+    color: #716969;
   }
   
   
@@ -146,7 +147,7 @@
   }
   .blog-post-meta {
     margin-bottom: 20px;
-    color: #999;
+    color: #716969;
   }
   
   
