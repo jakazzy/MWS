@@ -1,0 +1,1 @@
+Using either the Accessibility Developer Tools extension or document.activeElement see if you can track down the element that's stealing focus and fix the page.
