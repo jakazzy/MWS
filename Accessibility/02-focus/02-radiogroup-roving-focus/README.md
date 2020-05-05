@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
 
-    <div class="demo">
+You can find the files for this example in the lesson2-focus/05-radio-group directory.
 
-      <h3>Drink Options</h3>
+Using the ARIA Authoring Best Practices doc (either version 1.0 or version 1.1) find the radio pattern and implement support for the Down Arrow and Right Arrow pattern.
 
-      <ul id="group1" class="radiogroup">
-        <li tabindex="0" class="radio" checked>
-          Water
-        </li>
-        <li tabindex="-1" class="radio">
-          Tea
-        </li>
-        <li tabindex="-1" class="radio">
-          Coffee
-        </li>
-        <li tabindex="-1" class="radio">
-          Cola
-        </li>
-        <li tabindex="-1" class="radio">
-          Ginger Ale
-        </li>
-      </ul>
+Note: The 1.0 version of the doc refers to this as a "Radio Button" whereas the 1.1 version of the doc refers to this as a "Radio Group".
 
-    </div>
-
-    <script src="radiogroup.js"></script>
-
-  </body>
-</html>
+You'll want to work in the radiogroup.js file to implement your keyboarding support.
