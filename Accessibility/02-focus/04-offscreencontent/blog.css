@@ -169,6 +169,7 @@
   }
   
   .modal {
-    display: block;
-    left: 9999px;
+    display:none
   }
+
+ 
