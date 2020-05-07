@@ -6,8 +6,8 @@ const fileReader = new FileReader()
 const image = new Image()
 
 image.addEventListener('load', (e)=>{
-    previewCtr.width = image.width
-    previewCtr.height = image.height
+    $preview.width = image.width
+    $preview.height = image.height
     previewCtr.drawImage(image, 0,0)
     
 })
