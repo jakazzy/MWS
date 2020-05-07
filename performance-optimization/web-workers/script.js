@@ -5,10 +5,20 @@ const previewCtr = $preview.getContext('2d')
 const fileReader = new FileReader()
 const image = new Image()
 
+function applyFilter(){
+    const imageData =previewCtr.getImageData(0,0, image.width, image.height)
+    for(let x =0; x< image.width; x++){
+        for(let y = 0; y < image.height; y++){
+            let index = (x +(y + image.width) * 4)
+        }
+    }
+}
+
 image.addEventListener('load', (e)=>{
     $preview.width = image.width
     $preview.height = image.height
     previewCtr.drawImage(image, 0,0)
+    applyFilter()
     
 })
 
