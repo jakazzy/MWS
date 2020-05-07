@@ -1,4 +1,7 @@
 const $input = document.getElementById('input')
+const $preview = document.getElementById('preview')
+const previewCtr = $preview.getContext('2d')
+
 const fileReader = new FileReader()
 const image = new Image()
 
