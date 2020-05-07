@@ -25,8 +25,12 @@
 </head>
 <body>
     <!-- image/* is for mime type not file extension -->
-    <input type="file" accept="image/*" name="input" id="input">
-    <label for="input">Choose file</label>
+    <div>
+        <input type="file" accept="image/*" name="input" id="input">
+        <label for="input">Choose file</label>
+    </div>
+    
+    <canvas id="preview"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
