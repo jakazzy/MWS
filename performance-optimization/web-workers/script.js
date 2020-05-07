@@ -6,7 +6,10 @@ const fileReader = new FileReader()
 const image = new Image()
 
 image.addEventListener('load', (e)=>{
-    document.body.appendChild(image)
+    previewCtr.width = image.width
+    previewCtr.height = image.height
+    previewCtr.drawImage(image, 0,0)
+    
 })
 
 fileReader.addEventListener('load', (e)=>{
