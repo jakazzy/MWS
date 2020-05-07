@@ -4,13 +4,17 @@ const previewCtx = $preview.getContext('2d')
 
 const image = new Image()
 const worker = new Worker('worker.js')
+worker.addEventListener('message', (d)=>{
+    const imageData = d.data
+    previewCtx.putImageData(imageData, 0, 0)
+})
 
 function applyFilter(){
     const imageData = previewCtx.getImageData(0,0, $preview.width, $preview.height)
 
-    worker.postMessage(imageData)
+    worker.postMessage(imageData, [imageData.data.buffer])
     
-    previewCtx.putImageData(imageData, 0, 0)
+   
 }
 
 
