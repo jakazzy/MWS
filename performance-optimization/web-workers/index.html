@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #input{
+            width: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+        #input + label{
+            display: inline-block;
+            background-color:  rgb(159, 167, 96);
+            font-family: sans-serif;
+            padding: 5px;
+            font-size: 2em;
+        }
+            #input:focus + label {
+                outline: 5px solid blue;
+            }
+    </style>
 </head>
 <body>
     <!-- image/* is for mime type not file extension -->
