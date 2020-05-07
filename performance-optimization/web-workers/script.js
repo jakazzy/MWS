@@ -3,16 +3,13 @@ const $preview = document.getElementById('preview')
 const previewCtx = $preview.getContext('2d')
 
 const image = new Image()
+const worker = new Worker('worker.js')
 
 function applyFilter(){
-    const imageData = previewCtx.getImageData(0,0, image.width, image.height)
+    const imageData = previewCtx.getImageData(0,0, $preview.width, $preview.height)
 
-    for(let x = 0; x < image.width; x++){
-        for(let y = 0; y < image.height; y++){
-            let index = (x + (y * image.width)) * 4
-            imageData.data[index] = imageData.data[index] * 1.2
-        }
-    }
+    worker.postMessage(imageData)
+    
     previewCtx.putImageData(imageData, 0, 0)
 }
 
