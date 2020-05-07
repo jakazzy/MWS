@@ -24,6 +24,6 @@ $input.addEventListener('change', (e)=>{
         $preview.width = bitmap.width
         $preview.height = bitmap.height
         previewCtx.drawImage(bitmap, 0,0)
-        
+        applyFilter()
     })
 })
