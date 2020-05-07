@@ -17,15 +17,6 @@ function applyFilter(){
 }
 
 
-// image.addEventListener('load', (e)=>{
-//     $preview.width = image.width
-//     $preview.height = image.height
-//     previewCtx.drawImage(image, 0,0)
-//     applyFilter()
-    
-// })
-
-
 $input.addEventListener('change', (e)=>{
     const file = e.target.files[0]
     createImageBitmap(file)
