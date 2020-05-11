@@ -62,6 +62,12 @@ const app = (() => {
     getImageName('Chile'),
     getImageName('Peru')
   ];
+  // Promise.all:
+  // Promise.all accepts an array of promises, and will attempt to fulfill all of them. Exits early if just 1 promise gets rejected.
+
+  // Promise.race:
+  // The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, 
+  // with the value or reason from that promise.
   function allFlags(promiseList) {
 
     // use promise.all
