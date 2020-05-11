@@ -18,78 +18,53 @@
   <section class="form">
     <h3>Your Name and Demographic Information</h3>
     <label>First Name
-      <input type="text">
+      <input type="text" autocomplete="given-name" autofocus required>
     </label>
-    <label>Middle Initial
-      <input type="text">
-    </label>
+  
     <label>Last Name
-      <input type="text">
+      <input type="text" autocomplete="family-name" required>
     </label>
-    <label>Age
-      <select name="age">
-        <option>&lt;18</option>
-        <option>18-25</option>
-        <option>26-35</option>
-        <option>36-50</option>
-        <option>&gt;50</option>
-      </select>
-    </label>
-    <label>Gender
-      <select name="gender">
-        <option>Male</option>
-        <option>Female</option>
-      </select>
-    </label>
+   
+    
+    <label for="male">Male <input type="radio" id="male" name="gender" value="male"></label><br>
+    <label for="female">Female <input type="radio" id="female" name="gender" value="female"></label><br>
+    <label for="other">Other <input type="radio" id="other" name="gender" value="other"></label>
+
     <label>Email Address
-      <input type="text">
+      <input type="email" placeholder="email" autocomplete="email" required>
     </label>
-    <label>Confirm Email Address
-      <input type="text">
-    </label>
+   
     <label>Put me on the mailing list?
       <input class="inline" type="checkbox">
     </label>
 
     <h3>Your Shipping Address</h3>
-    <label>First Name
-      <input type="text">
-    </label>
-    <label>Middle Initial
-      <input type="text">
-    </label>
-    <label>Last Name
-      <input type="text">
-    </label>
-    <label>Company
-      <input type="text">
-    </label>
     <label>Address Line 1
-      <input type="text">
+      <input type="text"placeholder="P.O Box BT103, Accra" autocomplete="address-line1" required>
     </label>
     <label>Address Line 2
-      <input type="text">
+      <input type="text" autocomplete="address-line2">
     </label>
     <label>City
-      <input type="text">
+      <input type="text" placeholder="city">
     </label>
     <label>State/Province
-      <input type="text">
+      <input type="text" placeholder="New York" required>
     </label>
     <label>Postal Code
-      <input type="text">
+      <input type="text" autocomplete="postal-code" required>
     </label>
     <label>Country
-      <input type="text">
+      <input type="text" autocomplete="country-name" required>
     </label>
 
     <h3>Your Credit Card Information</h3>
     <div class="cc-warning"><em>Note: don't enter any actual credit card info!</em></div>
     <label>Credit Card Number
-      <input type="text">
+     <input type="cc-number" autocomplete="cc-number" placeholder="●●●● ●●●● ●●●● ●●●●" required >
     </label>
     <label>Credit Card Type
-      <select name="cc">
+      <select name="cc"  autocomplete="cc-type" required>
         <option>Visa</option>
         <option>American Express</option>
         <option>Mastercard</option>
@@ -97,43 +72,34 @@
       </select>
     </label>
     <label>Expiration Date
-      <input type="text" placeholder="MM"><input type="text" placeholder="YY">
+      <input type="date" placeholder="MM" autocomplete="cc-exp-month"><input type="text" placeholder="YY" autocomplete="cc-exp-year" required >
     </label>
     <label>CVV
-      <input type="number">
+      <input type="number"  autocomplete="cc-csc">
     </label>
 
     <h3>Your Billing Address</h3>
-    <label>First Name
-      <input type="text">
+   
+    <label for="use-diff-billing"><span>Use a different billing address?</span>
+      <input id="use-diff-billing" type="checkbox">
     </label>
-    <label>Middle Initial
-      <input type="text">
+    <div class="new-billing">
+      <label for="billing-name"><span class="sr-only">Name</span>
+      <input class="full" id="billing-name" type="text" placeholder="Name" required>
     </label>
-    <label>Last Name
-      <input type="text">
+    <label for="billing-address1"><span class="sr-only">Address Line 1</span>
+      <input class="full" id="billing-address1" type="text" placeholder="Address Line 1" required>
     </label>
-    <label>Company
-      <input type="text">
+    <label for="billing-address2"><span class="sr-only">Address Line 2</span>
+      <input class="full" id="billing-address2" type="text" placeholder="Address Line 2">
     </label>
-    <label>Address Line 1
-      <input type="text">
+    <label for="billing-address3"><span class="sr-only">Address Line 3</span>
+      <input class="full" id="billing-address3" type="text" placeholder="Address Line 3">
     </label>
-    <label>Address Line 2
-      <input type="text">
+    <label for="billing-address4"><span class="sr-only">Address Line 4</span>
+      <input class="full" id="billing-address4" type="text" placeholder="Address Line 4">
     </label>
-    <label>City
-      <input type="text">
-    </label>
-    <label>State/Province
-      <input type="text">
-    </label>
-    <label>Postal Code
-      <input type="text">
-    </label>
-    <label>Country
-      <input type="text">
-    </label>
+    </div>
   </section>
 
   <section class="order-review">
