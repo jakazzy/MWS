@@ -41,6 +41,30 @@ IssueTracker.prototype = {
   }
 };
 
+// class IssueTracker{
+//   constructor(issues = []){
+//     this.issues = issues
+//   }
+//   add(issue){
+//     this.issues.push(issue)
+//   }
+
+//   retrieve(){
+//     let message = ""
+//     switch(this.issues.length){
+//       case 0:
+//         break
+//       case 1:
+//         message = "Please correct the following issue:\n" + this.issues[0];
+//         break
+//       default:
+//         message= "Please correct the following issues:\n" + this.issues.join("\n");
+//         break
+//     }
+//     return message
+//   }
+// }
+
 submit.onclick = function () {
   /*
   Don't forget to grab the input's .value!
